@@ -2,8 +2,8 @@ const core = require("@actions/core");
 const github = require("@actions/github");
 
 async function run() {
-  const issueTitle = core.github("issueTitle");
-  const catFact = core.github("catFact");
+  const issueTitle = core.getInput("issueTitle");
+  const catFact = core.getInput("catFact");
   
   const token = core.getInput("repoToken");
   try {
